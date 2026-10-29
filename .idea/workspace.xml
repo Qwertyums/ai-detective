@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7defedf-e274-4aa4-8033-513ee74932ae" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/claims.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/data/claims.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/documents.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/data/documents.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/questions.jsonl" beforeDir="false" afterPath="$PROJECT_DIR$/data/questions.jsonl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prompts/system_prompt.txt" beforeDir="false" afterPath="$PROJECT_DIR$/prompts/system_prompt.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/context_builder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evaluation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/evaluation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/llm.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/llm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/padic.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/padic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/retrieval.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/retrieval.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/tests_core.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Лабораторные работы АОТ.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
