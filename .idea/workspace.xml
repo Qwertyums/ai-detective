@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7defedf-e274-4aa4-8033-513ee74932ae" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Лабораторные работы АОТ.docx" beforeDir="false" />
-    </list>
+    <list default="true" id="c7defedf-e274-4aa4-8033-513ee74932ae" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,15 +48,15 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/ai-detective/data",
+    "last_opened_file_path": "D:/ai-detective",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\ai-detective\data" />
       <recent name="D:\ai-detective" />
+      <recent name="D:\ai-detective\data" />
     </key>
   </component>
   <component name="SharedIndexes">
