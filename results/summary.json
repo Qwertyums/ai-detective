@@ -1,0 +1,1544 @@
+{
+  "records": 150,
+  "paired_records": 144,
+  "metrics": [
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "add_contradiction",
+      "mode": "A",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 2,
+      "normalized_responses": 0,
+      "repaired_responses": 2,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 18226.666666666668,
+      "mean_response_seconds": 4.720404658325909,
+      "Total Questions": 12.0,
+      "Status Accuracy": 1.0,
+      "Evidence Precision": 0.6666666666666666,
+      "Evidence Recall": 0.875,
+      "Evidence F1": 0.7277777777777779,
+      "Counterevidence Recall": 0.9,
+      "Both Recognition Rate": 1.0,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9900000000000001,
+      "accuracy_including_errors": 1.0
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "add_contradiction",
+      "mode": "B",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2360.25,
+      "mean_response_seconds": 4.368887625001662,
+      "Total Questions": 12.0,
+      "Status Accuracy": 0.75,
+      "Evidence Precision": 0.5444444444444445,
+      "Evidence Recall": 0.7222222222222223,
+      "Evidence F1": 0.5944444444444444,
+      "Counterevidence Recall": 0.5,
+      "Both Recognition Rate": 0.7,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9741666666666666,
+      "accuracy_including_errors": 0.75
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "add_contradiction",
+      "mode": "C",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2421.6666666666665,
+      "mean_response_seconds": 3.999639033327791,
+      "Total Questions": 12.0,
+      "Status Accuracy": 0.75,
+      "Evidence Precision": 0.6319444444444445,
+      "Evidence Recall": 0.8055555555555557,
+      "Evidence F1": 0.6833333333333332,
+      "Counterevidence Recall": 0.6,
+      "Both Recognition Rate": 0.7,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9741666666666666,
+      "accuracy_including_errors": 0.75
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "baseline",
+      "mode": "A",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 1,
+      "normalized_responses": 0,
+      "repaired_responses": 1,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 16649.666666666668,
+      "mean_response_seconds": 5.60845381666392,
+      "Total Questions": 12.0,
+      "Status Accuracy": 0.9166666666666666,
+      "Evidence Precision": 0.9097222222222222,
+      "Evidence Recall": 0.8958333333333334,
+      "Evidence F1": 0.8791666666666665,
+      "Counterevidence Recall": 1.0,
+      "Both Recognition Rate": 1.0,
+      "Insufficient Recognition Rate": 0.5,
+      "Confident Unsupported Rate": 0.5,
+      "Mean Confidence": 0.9933333333333333,
+      "accuracy_including_errors": 0.9166666666666666
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "baseline",
+      "mode": "B",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2345.3333333333335,
+      "mean_response_seconds": 4.135890816665778,
+      "Total Questions": 12.0,
+      "Status Accuracy": 0.8333333333333334,
+      "Evidence Precision": 0.8055555555555555,
+      "Evidence Recall": 0.861111111111111,
+      "Evidence F1": 0.8142857142857142,
+      "Counterevidence Recall": 1.0,
+      "Both Recognition Rate": 1.0,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9783333333333335,
+      "accuracy_including_errors": 0.8333333333333334
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "baseline",
+      "mode": "C",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2404.0,
+      "mean_response_seconds": 3.6790286500011766,
+      "Total Questions": 12.0,
+      "Status Accuracy": 0.8333333333333334,
+      "Evidence Precision": 0.9305555555555555,
+      "Evidence Recall": 0.861111111111111,
+      "Evidence F1": 0.8805555555555555,
+      "Counterevidence Recall": 1.0,
+      "Both Recognition Rate": 1.0,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.98,
+      "accuracy_including_errors": 0.8333333333333334
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "permutation",
+      "mode": "A",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 15356.666666666666,
+      "mean_response_seconds": 3.750526291669909,
+      "Total Questions": 12.0,
+      "Status Accuracy": 1.0,
+      "Evidence Precision": 0.9083333333333333,
+      "Evidence Recall": 0.9583333333333334,
+      "Evidence F1": 0.9143518518518517,
+      "Counterevidence Recall": 1.0,
+      "Both Recognition Rate": 1.0,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9941666666666668,
+      "accuracy_including_errors": 1.0
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "permutation",
+      "mode": "B",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2345.3333333333335,
+      "mean_response_seconds": 3.634559325000737,
+      "Total Questions": 12.0,
+      "Status Accuracy": 0.75,
+      "Evidence Precision": 0.7916666666666666,
+      "Evidence Recall": 0.8333333333333334,
+      "Evidence F1": 0.7892857142857143,
+      "Counterevidence Recall": 1.0,
+      "Both Recognition Rate": 1.0,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9825,
+      "accuracy_including_errors": 0.75
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "permutation",
+      "mode": "C",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2404.0,
+      "mean_response_seconds": 3.4787695416622832,
+      "Total Questions": 12.0,
+      "Status Accuracy": 0.8333333333333334,
+      "Evidence Precision": 0.8583333333333333,
+      "Evidence Recall": 0.8333333333333331,
+      "Evidence F1": 0.8324074074074076,
+      "Counterevidence Recall": 1.0,
+      "Both Recognition Rate": 1.0,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9816666666666668,
+      "accuracy_including_errors": 0.8333333333333334
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "remove_premise",
+      "mode": "A",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 15214.5,
+      "mean_response_seconds": 4.979696033335737,
+      "Total Questions": 12,
+      "Status Accuracy": 0.75,
+      "Evidence Precision": 0.5916666666666667,
+      "Evidence Recall": 0.9166666666666666,
+      "Evidence F1": 0.6430555555555555,
+      "Counterevidence Recall": null,
+      "Both Recognition Rate": null,
+      "Insufficient Recognition Rate": 0.7,
+      "Confident Unsupported Rate": 0.3,
+      "Mean Confidence": 0.9625,
+      "accuracy_including_errors": 0.75
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "remove_premise",
+      "mode": "B",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2336.6666666666665,
+      "mean_response_seconds": 3.9568260749947513,
+      "Total Questions": 12,
+      "Status Accuracy": 1.0,
+      "Evidence Precision": 0.5208333333333334,
+      "Evidence Recall": 0.875,
+      "Evidence F1": 0.5880952380952381,
+      "Counterevidence Recall": null,
+      "Both Recognition Rate": null,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9608333333333334,
+      "accuracy_including_errors": 1.0
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "remove_premise",
+      "mode": "C",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2398.0833333333335,
+      "mean_response_seconds": 4.035925716671045,
+      "Total Questions": 12,
+      "Status Accuracy": 1.0,
+      "Evidence Precision": 0.6458333333333334,
+      "Evidence Recall": 0.875,
+      "Evidence F1": 0.6547619047619048,
+      "Counterevidence Recall": null,
+      "Both Recognition Rate": null,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9591666666666666,
+      "accuracy_including_errors": 1.0
+    }
+  ],
+  "stability": [
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "A",
+      "stress_type": "add_contradiction",
+      "paired_questions": 12,
+      "status_change_rate": 0.75,
+      "stability_score": null,
+      "expected_status_accuracy": 1.0,
+      "evidence_id_jaccard": 0.7777777777777778,
+      "answer_change_rate": 0.9166666666666666
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "B",
+      "stress_type": "add_contradiction",
+      "paired_questions": 12,
+      "status_change_rate": 0.5,
+      "stability_score": null,
+      "expected_status_accuracy": 0.75,
+      "evidence_id_jaccard": 0.6666666666666666,
+      "answer_change_rate": 0.75
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "C",
+      "stress_type": "add_contradiction",
+      "paired_questions": 12,
+      "status_change_rate": 0.5,
+      "stability_score": null,
+      "expected_status_accuracy": 0.75,
+      "evidence_id_jaccard": 0.7527777777777778,
+      "answer_change_rate": 0.75
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "A",
+      "stress_type": "permutation",
+      "paired_questions": 12,
+      "status_change_rate": 0.08333333333333333,
+      "stability_score": 0.9166666666666666,
+      "expected_status_accuracy": 1.0,
+      "evidence_id_jaccard": 0.8541666666666666,
+      "answer_change_rate": 0.5
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "B",
+      "stress_type": "permutation",
+      "paired_questions": 12,
+      "status_change_rate": 0.08333333333333333,
+      "stability_score": 0.9166666666666666,
+      "expected_status_accuracy": 0.75,
+      "evidence_id_jaccard": 0.9236111111111112,
+      "answer_change_rate": 0.3333333333333333
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "C",
+      "stress_type": "permutation",
+      "paired_questions": 12,
+      "status_change_rate": 0.0,
+      "stability_score": 1.0,
+      "expected_status_accuracy": 0.8333333333333334,
+      "evidence_id_jaccard": 0.9208333333333334,
+      "answer_change_rate": 0.3333333333333333
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "A",
+      "stress_type": "remove_premise",
+      "paired_questions": 12,
+      "status_change_rate": 0.6666666666666666,
+      "stability_score": null,
+      "expected_status_accuracy": 0.75,
+      "evidence_id_jaccard": 0.4305555555555556,
+      "answer_change_rate": 0.8333333333333334
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "B",
+      "stress_type": "remove_premise",
+      "paired_questions": 12,
+      "status_change_rate": 0.6666666666666666,
+      "stability_score": null,
+      "expected_status_accuracy": 1.0,
+      "evidence_id_jaccard": 0.5222222222222223,
+      "answer_change_rate": 0.6666666666666666
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "C",
+      "stress_type": "remove_premise",
+      "paired_questions": 12,
+      "status_change_rate": 0.6666666666666666,
+      "stability_score": null,
+      "expected_status_accuracy": 1.0,
+      "evidence_id_jaccard": 0.4527777777777778,
+      "answer_change_rate": 0.6666666666666666
+    }
+  ],
+  "calibration": [
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "A",
+      "confidence_bucket": "(0.9, 1.0]",
+      "count": 12,
+      "actual_accuracy": 0.9166666666666666,
+      "avg_confidence": 0.9933333333333333
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "B",
+      "confidence_bucket": "(0.7, 0.9]",
+      "count": 1,
+      "actual_accuracy": 1.0,
+      "avg_confidence": 0.9
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "B",
+      "confidence_bucket": "(0.9, 1.0]",
+      "count": 11,
+      "actual_accuracy": 0.8181818181818182,
+      "avg_confidence": 0.9854545454545455
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "C",
+      "confidence_bucket": "(0.9, 1.0]",
+      "count": 12,
+      "actual_accuracy": 0.8333333333333334,
+      "avg_confidence": 0.98
+    }
+  ],
+  "available_records": 147,
+  "available_metrics": [
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "add_contradiction",
+      "mode": "A",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 2,
+      "normalized_responses": 0,
+      "repaired_responses": 2,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 18226.666666666668,
+      "mean_response_seconds": 4.720404658325909,
+      "Total Questions": 12.0,
+      "Status Accuracy": 1.0,
+      "Evidence Precision": 0.6666666666666666,
+      "Evidence Recall": 0.875,
+      "Evidence F1": 0.7277777777777777,
+      "Counterevidence Recall": 0.9,
+      "Both Recognition Rate": 1.0,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9900000000000001,
+      "accuracy_including_errors": 1.0
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "add_contradiction",
+      "mode": "B",
+      "attempts": 13,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 13,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2358.230769230769,
+      "mean_response_seconds": 4.267433561541391,
+      "Total Questions": 13.0,
+      "Status Accuracy": 0.7692307692307693,
+      "Evidence Precision": 0.5794871794871795,
+      "Evidence Recall": 0.7435897435897435,
+      "Evidence F1": 0.6256410256410257,
+      "Counterevidence Recall": 0.5454545454545454,
+      "Both Recognition Rate": 0.7272727272727273,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9753846153846154,
+      "accuracy_including_errors": 0.7692307692307693
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "add_contradiction",
+      "mode": "C",
+      "attempts": 13,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 13,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2419.153846153846,
+      "mean_response_seconds": 3.9547911307622248,
+      "Total Questions": 13.0,
+      "Status Accuracy": 0.7692307692307693,
+      "Evidence Precision": 0.6602564102564104,
+      "Evidence Recall": 0.8205128205128205,
+      "Evidence F1": 0.7076923076923076,
+      "Counterevidence Recall": 0.6363636363636364,
+      "Both Recognition Rate": 0.7272727272727273,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9753846153846154,
+      "accuracy_including_errors": 0.7692307692307693
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "baseline",
+      "mode": "A",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 1,
+      "normalized_responses": 0,
+      "repaired_responses": 1,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 16649.666666666668,
+      "mean_response_seconds": 5.60845381666392,
+      "Total Questions": 12.0,
+      "Status Accuracy": 0.9166666666666666,
+      "Evidence Precision": 0.9097222222222222,
+      "Evidence Recall": 0.8958333333333334,
+      "Evidence F1": 0.8791666666666665,
+      "Counterevidence Recall": 1.0,
+      "Both Recognition Rate": 1.0,
+      "Insufficient Recognition Rate": 0.5,
+      "Confident Unsupported Rate": 0.5,
+      "Mean Confidence": 0.9933333333333333,
+      "accuracy_including_errors": 0.9166666666666666
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "baseline",
+      "mode": "B",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2345.3333333333335,
+      "mean_response_seconds": 4.135890816665778,
+      "Total Questions": 12.0,
+      "Status Accuracy": 0.8333333333333334,
+      "Evidence Precision": 0.8055555555555555,
+      "Evidence Recall": 0.861111111111111,
+      "Evidence F1": 0.8142857142857142,
+      "Counterevidence Recall": 1.0,
+      "Both Recognition Rate": 1.0,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9783333333333335,
+      "accuracy_including_errors": 0.8333333333333334
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "baseline",
+      "mode": "C",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2404.0,
+      "mean_response_seconds": 3.6790286500011766,
+      "Total Questions": 12.0,
+      "Status Accuracy": 0.8333333333333334,
+      "Evidence Precision": 0.9305555555555555,
+      "Evidence Recall": 0.861111111111111,
+      "Evidence F1": 0.8805555555555555,
+      "Counterevidence Recall": 1.0,
+      "Both Recognition Rate": 1.0,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.98,
+      "accuracy_including_errors": 0.8333333333333334
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "permutation",
+      "mode": "A",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 15356.666666666666,
+      "mean_response_seconds": 3.750526291669909,
+      "Total Questions": 12.0,
+      "Status Accuracy": 1.0,
+      "Evidence Precision": 0.9083333333333333,
+      "Evidence Recall": 0.9583333333333334,
+      "Evidence F1": 0.9143518518518517,
+      "Counterevidence Recall": 1.0,
+      "Both Recognition Rate": 1.0,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9941666666666668,
+      "accuracy_including_errors": 1.0
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "permutation",
+      "mode": "B",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2345.3333333333335,
+      "mean_response_seconds": 3.634559325000737,
+      "Total Questions": 12.0,
+      "Status Accuracy": 0.75,
+      "Evidence Precision": 0.7916666666666666,
+      "Evidence Recall": 0.8333333333333334,
+      "Evidence F1": 0.7892857142857143,
+      "Counterevidence Recall": 1.0,
+      "Both Recognition Rate": 1.0,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9825,
+      "accuracy_including_errors": 0.75
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "permutation",
+      "mode": "C",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2404.0,
+      "mean_response_seconds": 3.4787695416622832,
+      "Total Questions": 12.0,
+      "Status Accuracy": 0.8333333333333334,
+      "Evidence Precision": 0.8583333333333333,
+      "Evidence Recall": 0.8333333333333331,
+      "Evidence F1": 0.8324074074074076,
+      "Counterevidence Recall": 1.0,
+      "Both Recognition Rate": 1.0,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9816666666666668,
+      "accuracy_including_errors": 0.8333333333333334
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "remove_premise",
+      "mode": "A",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 15214.5,
+      "mean_response_seconds": 4.979696033335737,
+      "Total Questions": 12,
+      "Status Accuracy": 0.75,
+      "Evidence Precision": 0.5916666666666667,
+      "Evidence Recall": 0.9166666666666666,
+      "Evidence F1": 0.6430555555555556,
+      "Counterevidence Recall": null,
+      "Both Recognition Rate": null,
+      "Insufficient Recognition Rate": 0.7,
+      "Confident Unsupported Rate": 0.3,
+      "Mean Confidence": 0.9625,
+      "accuracy_including_errors": 0.75
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "remove_premise",
+      "mode": "B",
+      "attempts": 12,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 12,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2336.6666666666665,
+      "mean_response_seconds": 3.9568260749947513,
+      "Total Questions": 12,
+      "Status Accuracy": 1.0,
+      "Evidence Precision": 0.5208333333333333,
+      "Evidence Recall": 0.875,
+      "Evidence F1": 0.5880952380952381,
+      "Counterevidence Recall": null,
+      "Both Recognition Rate": null,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9608333333333334,
+      "accuracy_including_errors": 1.0
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "kind": "remove_premise",
+      "mode": "C",
+      "attempts": 13,
+      "model": "gpt-5.6-luna",
+      "provider": "chatgpt",
+      "initial_format_failures": 0,
+      "normalized_responses": 0,
+      "repaired_responses": 0,
+      "valid_scored": 13,
+      "errors": 0,
+      "unreviewed": 0,
+      "mean_input_tokens": 2404.4615384615386,
+      "mean_response_seconds": 4.056830884620117,
+      "Total Questions": 13,
+      "Status Accuracy": 1.0,
+      "Evidence Precision": 0.6346153846153846,
+      "Evidence Recall": 0.8461538461538461,
+      "Evidence F1": 0.6428571428571429,
+      "Counterevidence Recall": null,
+      "Both Recognition Rate": null,
+      "Insufficient Recognition Rate": 1.0,
+      "Confident Unsupported Rate": 0.0,
+      "Mean Confidence": 0.9607692307692308,
+      "accuracy_including_errors": 1.0
+    }
+  ],
+  "available_stability": [
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "A",
+      "stress_type": "add_contradiction",
+      "paired_questions": 12,
+      "status_change_rate": 0.75,
+      "stability_score": null,
+      "expected_status_accuracy": 1.0,
+      "evidence_id_jaccard": 0.7777777777777778,
+      "answer_change_rate": 0.9166666666666666
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "B",
+      "stress_type": "add_contradiction",
+      "paired_questions": 13,
+      "status_change_rate": 0.5384615384615384,
+      "stability_score": null,
+      "expected_status_accuracy": 0.7692307692307693,
+      "evidence_id_jaccard": 0.6538461538461539,
+      "answer_change_rate": 0.7692307692307693
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "C",
+      "stress_type": "add_contradiction",
+      "paired_questions": 13,
+      "status_change_rate": 0.5384615384615384,
+      "stability_score": null,
+      "expected_status_accuracy": 0.7692307692307693,
+      "evidence_id_jaccard": 0.7717948717948718,
+      "answer_change_rate": 0.7692307692307693
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "A",
+      "stress_type": "permutation",
+      "paired_questions": 12,
+      "status_change_rate": 0.08333333333333333,
+      "stability_score": 0.9166666666666666,
+      "expected_status_accuracy": 1.0,
+      "evidence_id_jaccard": 0.8541666666666666,
+      "answer_change_rate": 0.5
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "B",
+      "stress_type": "permutation",
+      "paired_questions": 12,
+      "status_change_rate": 0.08333333333333333,
+      "stability_score": 0.9166666666666666,
+      "expected_status_accuracy": 0.75,
+      "evidence_id_jaccard": 0.9236111111111112,
+      "answer_change_rate": 0.3333333333333333
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "C",
+      "stress_type": "permutation",
+      "paired_questions": 12,
+      "status_change_rate": 0.0,
+      "stability_score": 1.0,
+      "expected_status_accuracy": 0.8333333333333334,
+      "evidence_id_jaccard": 0.9208333333333334,
+      "answer_change_rate": 0.3333333333333333
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "A",
+      "stress_type": "remove_premise",
+      "paired_questions": 12,
+      "status_change_rate": 0.6666666666666666,
+      "stability_score": null,
+      "expected_status_accuracy": 0.75,
+      "evidence_id_jaccard": 0.4305555555555556,
+      "answer_change_rate": 0.8333333333333334
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "B",
+      "stress_type": "remove_premise",
+      "paired_questions": 12,
+      "status_change_rate": 0.6666666666666666,
+      "stability_score": null,
+      "expected_status_accuracy": 1.0,
+      "evidence_id_jaccard": 0.5222222222222223,
+      "answer_change_rate": 0.6666666666666666
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "C",
+      "stress_type": "remove_premise",
+      "paired_questions": 13,
+      "status_change_rate": 0.6153846153846154,
+      "stability_score": null,
+      "expected_status_accuracy": 1.0,
+      "evidence_id_jaccard": 0.44358974358974357,
+      "answer_change_rate": 0.6153846153846154
+    }
+  ],
+  "available_calibration": [
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "A",
+      "confidence_bucket": "(0.9, 1.0]",
+      "count": 12,
+      "actual_accuracy": 0.9166666666666666,
+      "avg_confidence": 0.9933333333333333
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "B",
+      "confidence_bucket": "(0.7, 0.9]",
+      "count": 1,
+      "actual_accuracy": 1.0,
+      "avg_confidence": 0.9
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "B",
+      "confidence_bucket": "(0.9, 1.0]",
+      "count": 11,
+      "actual_accuracy": 0.8181818181818182,
+      "avg_confidence": 0.9854545454545455
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "mode": "C",
+      "confidence_bucket": "(0.9, 1.0]",
+      "count": 12,
+      "actual_accuracy": 0.8333333333333334,
+      "avg_confidence": 0.98
+    }
+  ],
+  "coverage": [
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q1",
+      "case_id": "baseline",
+      "kind": "baseline",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q2",
+      "case_id": "baseline",
+      "kind": "baseline",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q12",
+      "case_id": "baseline",
+      "kind": "baseline",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q3",
+      "case_id": "baseline",
+      "kind": "baseline",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q4",
+      "case_id": "baseline",
+      "kind": "baseline",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q5",
+      "case_id": "baseline",
+      "kind": "baseline",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q6",
+      "case_id": "baseline",
+      "kind": "baseline",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q7",
+      "case_id": "baseline",
+      "kind": "baseline",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q8",
+      "case_id": "baseline",
+      "kind": "baseline",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q9",
+      "case_id": "baseline",
+      "kind": "baseline",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q10",
+      "case_id": "baseline",
+      "kind": "baseline",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q11",
+      "case_id": "baseline",
+      "kind": "baseline",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q1",
+      "case_id": "P_Q1",
+      "kind": "permutation",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q1",
+      "case_id": "R_Q1",
+      "kind": "remove_premise",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q1",
+      "case_id": "X_Q1",
+      "kind": "add_contradiction",
+      "modes": [
+        "C"
+      ],
+      "missing_modes": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q2",
+      "case_id": "P_Q2",
+      "kind": "permutation",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q2",
+      "case_id": "R_Q2",
+      "kind": "remove_premise",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q2",
+      "case_id": "X_Q2",
+      "kind": "add_contradiction",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q3",
+      "case_id": "P_Q3",
+      "kind": "permutation",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q3",
+      "case_id": "R_Q3",
+      "kind": "remove_premise",
+      "modes": [
+        "C"
+      ],
+      "missing_modes": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q3",
+      "case_id": "X_Q3",
+      "kind": "add_contradiction",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q4",
+      "case_id": "P_Q4",
+      "kind": "permutation",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q4",
+      "case_id": "R_Q4",
+      "kind": "remove_premise",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q4",
+      "case_id": "X_Q4",
+      "kind": "add_contradiction",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q5",
+      "case_id": "P_Q5",
+      "kind": "permutation",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q5",
+      "case_id": "R_Q5",
+      "kind": "remove_premise",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q5",
+      "case_id": "X_Q5",
+      "kind": "add_contradiction",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q6",
+      "case_id": "P_Q6",
+      "kind": "permutation",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q6",
+      "case_id": "R_Q6",
+      "kind": "remove_premise",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q6",
+      "case_id": "X_Q6",
+      "kind": "add_contradiction",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q7",
+      "case_id": "P_Q7",
+      "kind": "permutation",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q7",
+      "case_id": "R_Q7",
+      "kind": "remove_premise",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q7",
+      "case_id": "X_Q7",
+      "kind": "add_contradiction",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q8",
+      "case_id": "P_Q8",
+      "kind": "permutation",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q8",
+      "case_id": "R_Q8",
+      "kind": "remove_premise",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q8",
+      "case_id": "X_Q8",
+      "kind": "add_contradiction",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q9",
+      "case_id": "P_Q9",
+      "kind": "permutation",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q9",
+      "case_id": "R_Q9",
+      "kind": "remove_premise",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q9",
+      "case_id": "X_Q9",
+      "kind": "add_contradiction",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q10",
+      "case_id": "P_Q10",
+      "kind": "permutation",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q10",
+      "case_id": "R_Q10",
+      "kind": "remove_premise",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q10",
+      "case_id": "X_Q10",
+      "kind": "add_contradiction",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q11",
+      "case_id": "P_Q11",
+      "kind": "permutation",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q11",
+      "case_id": "R_Q11",
+      "kind": "remove_premise",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q11",
+      "case_id": "X_Q11",
+      "kind": "add_contradiction",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q12",
+      "case_id": "P_Q12",
+      "kind": "permutation",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q12",
+      "case_id": "R_Q12",
+      "kind": "remove_premise",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q12",
+      "case_id": "X_Q12",
+      "kind": "add_contradiction",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q1",
+      "case_id": "X_Q1",
+      "kind": "add_contradiction",
+      "modes": [
+        "B"
+      ],
+      "missing_modes": [
+        "A",
+        "C"
+      ]
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q1",
+      "case_id": "X_Q1",
+      "kind": "add_contradiction",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    },
+    {
+      "study_digest": "d052e1e2bfbd4d9974721f45a4cac7a1b23bd61738e0123b214252ffa7cef005",
+      "question_id": "Q3",
+      "case_id": "R_Q3",
+      "kind": "remove_premise",
+      "modes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "missing_modes": []
+    }
+  ]
+}

@@ -1,169 +1,158 @@
-import streamlit as st
+"""Streamlit research bench. Run from the repository root."""
+from datetime import datetime, timezone
+from io import StringIO
+import json
 import pandas as pd
-from src.schemas import Document, Claim, Question
-from src.retrieval import load_jsonl, build_context
-from src.llm import run_llm_inference
-from src.evaluation import evaluate_single_question, compare_modes
+import streamlit as st
+from src.schemas import Document, Claim, Question, StressCase
+from src.data_validation import ROOT, load_dataset, validate_dataset
+from src.retrieval import load_jsonl
+from src.context_builder import prepare_context
+from src.experiments import load_records, run_one, result_filename
+from src.auth_ui import connection_controls
+from src.stress import apply_case, review_digest, is_reviewed, snapshot
+from src.padic import get_padic_code, encode_path
+from scripts.prepare_dataset import write_jsonl
+from scripts.summarize_results import summarize
 
-st.set_page_config(page_title="AI Detective", layout="wide")
-st.title("🕵️ AI Detective: Оценка логического вывода LLM")
+st.set_page_config(page_title='AI Detective', layout='wide')
+st.title('AI Detective')
+st.caption('Полностью вымышленное досье. Сравнение полного контекста, BM25 и p-adic группировки на одной модели.')
 
-# ==========================================
-# 1. Инициализация Session State (История)
-# ==========================================
-if "history" not in st.session_state:
-    st.session_state.history = {"A": [], "B": [], "C": []}
-if "last_result" not in st.session_state:
-    st.session_state.last_result = None
-if "last_eval" not in st.session_state:
-    st.session_state.last_eval = None
+def uploaded_records(file, model):
+    return [model.model_validate(json.loads(line)) for line in StringIO(file.getvalue().decode('utf-8-sig')) if line.strip()]
 
+with st.sidebar.expander('Загрузка своего досье'):
+    files = [st.file_uploader(label, type=['jsonl'], key=label) for label in ['documents', 'claims', 'questions']]
+    if any(files) and not all(files):
+        st.info('Выберите все три файла.')
+try:
+    if all(files):
+        documents, claims, questions = [uploaded_records(f, m) for f,m in zip(files, [Document, Claim, Question])]
+        validate_dataset(documents, claims, questions)
+    else:
+        documents, claims, questions = load_dataset()
+except (ValueError, OSError) as exc:
+    st.error(str(exc))
+    st.stop()
 
-# ==========================================
-# 2. Загрузка данных
-# ==========================================
-@st.cache_data
-def load_all_data():
-    docs = load_jsonl("data/documents.jsonl", Document)
-    claims = load_jsonl("data/claims.jsonl", Claim)
-    questions = load_jsonl("data/questions.jsonl", Question)
-    return docs, claims, questions
-
-
-documents, claims, questions = load_all_data()
-
-# ==========================================
-# 3. Сайдбар: Конфигурация и Управление
-# ==========================================
-st.sidebar.header("Конфигурация")
-mode = st.sidebar.radio(
-    "Режим контекста",
-    ["A: Полный контекст", "B: Плоский BM25 (Top-15)", "C: p-adic контекст"]
-)
-
-st.sidebar.header("Стресс-тесты")
-permute_docs = st.sidebar.checkbox("Тест 1: Перестановка документов (seed=42)")
-remove_premise = st.sidebar.checkbox("Тест 2: Удаление посылки (C25)")
-add_contradiction = st.sidebar.checkbox("Тест 3: Добавление противоречия")
-
-if st.sidebar.button("🗑️ Сбросить историю запусков"):
-    st.session_state.history = {"A": [], "B": [], "C": []}
-    st.session_state.last_result = None
-    st.session_state.last_eval = None
-    st.rerun()
-
-# ==========================================
-# 4. Основной экран: Выбор вопроса
-# ==========================================
-st.subheader("Выберите вопрос для анализа")
-q_options = [f"{q.question_id}: {q.question}" for q in questions]
-selected_q_str = st.selectbox("Вопрос", q_options)
-selected_q = next(q for q in questions if selected_q_str.startswith(q.question_id))
-
-# Подготовка параметров стресс-тестов
-stress_remove = "C25" if remove_premise else None
-stress_add = "C99: Админ признался, что сам запустил скрипт в 17:03." if add_contradiction else None
-
-# Сборка контекста
-mode_key = mode.split(":")[0].strip()  # "A", "B" или "C"
-context = build_context(
-    mode_key,
-    selected_q.question,
-    claims,
-    documents,
-    stress_remove_claim_id=stress_remove,
-    stress_add_contradiction=stress_add
-)
-
-with st.expander("📄 Показать контекст, переданный модели"):
-    st.text(context)
-
-# ==========================================
-# 5. Запуск инференса и Оценка
-# ==========================================
-if st.button("🚀 Запустить инференс", type="primary"):
-    with st.spinner("Модель анализирует контекст..."):
-        # 1. Получаем ответ от LLM
-        result = run_llm_inference(selected_q, context)
-
-        # 2. Оцениваем ответ против золотого стандарта
-        eval_result = evaluate_single_question(selected_q, result)
-
-        # 3. Сохраняем в историю
-        st.session_state.last_result = result
-        st.session_state.last_eval = eval_result
-        st.session_state.history[mode_key].append(eval_result)
-
-# ==========================================
-# 6. Отображение результатов текущего запуска
-# ==========================================
-if st.session_state.last_result is not None:
-    result = st.session_state.last_result
-    eval_res = st.session_state.last_eval
-
-    st.divider()
-    st.subheader(f"Результат модели (Режим {mode_key})")
-
-    # Метрики текущего запуска
-    col1, col2, col3, col4 = st.columns(4)
-    status_icon = "✅" if eval_res["status_accuracy"] == 1 else "❌"
-    col1.metric("Статус", f"{status_icon} {result.status}")
-    col2.metric("Confidence", f"{result.confidence:.2f}")
-    col3.metric("Evidence F1", f"{eval_res['evidence_f1']:.2f}")
-    col4.metric("Токены контекста", len(context.split()))
-
-    # Детали ответа
-    st.info(f"**Ответ модели:** {result.answer}")
-    st.write(f"**Золотой ответ:** {selected_q.gold_answer}")
-
-    st.write(f"**Объяснение:** {result.explanation}")
-
-    col_evidence, col_counter = st.columns(2)
-    with col_evidence:
-        st.write(f"**Доказательства:** `{', '.join(result.evidence_ids) if result.evidence_ids else 'Нет'}`")
-        st.write(f"**Золотые доказательства:** `{', '.join(selected_q.gold_evidence_ids)}`")
-
-    with col_counter:
-        st.write(
-            f"**Контрдоказательства:** `{', '.join(result.counterevidence_ids) if result.counterevidence_ids else 'Нет'}`")
-        st.write(f"**Золотые контрдоказательства:** `{', '.join(selected_q.gold_counterevidence_ids)}`")
-
-# ==========================================
-# 7. Сравнение режимов (Динамическая таблица)
-# ==========================================
-st.divider()
-st.subheader("📊 Сравнение режимов (Накопленная статистика)")
-
-# Проверяем, есть ли данные в истории
-has_data = any(len(v) > 0 for v in st.session_state.history.values())
-
-if has_data:
-    df_comparison = compare_modes(st.session_state.history)
-
-    # Переименуем колонки для красивого отображения в Streamlit
-    df_comparison = df_comparison.rename(columns={
-        "Mode": "Режим",
-        "Status Accuracy": "Accuracy Статуса",
-        "Evidence F1": "Evidence F1",
-        "Counterevidence Recall": "Counter. Recall",
-        "Both Recognition Rate": "Распознано 'both'",
-        "Insufficient Recognition Rate": "Распознано 'insufficient'",
-        "Mean Confidence": "Средний Confidence"
-    })
-
-    # Форматируем числа
-    df_display = df_comparison.style.format({
-        "Accuracy Статуса": "{:.2%}",
-        "Evidence F1": "{:.2f}",
-        "Counter. Recall": "{:.2f}",
-        "Распознано 'both'": "{:.2%}",
-        "Распознано 'insufficient'": "{:.2%}",
-        "Средний Confidence": "{:.2f}"
-    })
-
-    st.dataframe(df_display, use_container_width=True, hide_index=True)
-
-    st.caption(
-        "💡 Подсказка: Запустите инференс для одного и того же вопроса в режимах A, B и C, чтобы увидеть, как меняется Evidence F1 и распознавание сложных статусов.")
+st.sidebar.write(validate_dataset(documents, claims, questions))
+provider, selected_model, connection_ready = connection_controls()
+mode = st.sidebar.radio('Режим', ['A','B','C'], format_func=lambda x: {'A':'A — всё досье','B':'B — BM25 top-15','C':'C — те же top-15 по ветвям'}[x])
+question_id = st.selectbox('Вопрос', [q.question_id for q in questions], format_func=lambda key: next(q.question for q in questions if q.question_id == key))
+question = next(q for q in questions if q.question_id == question_id)
+cases = load_jsonl(ROOT/'data/stress_cases.jsonl', StressCase)
+case_options = [c for c in cases if c.question_id == question_id] if not all(files) else []
+case_id = st.sidebar.selectbox('Один стресс-фактор', ['baseline'] + [c.case_id for c in case_options])
+case = next((c for c in case_options if c.case_id == case_id), None)
+if case:
+    changed_docs, changed_claims = apply_case(case, documents, claims)
 else:
-    st.info("ℹ️ История пуста. Запустите инференс хотя бы в одном режиме, чтобы увидеть сравнительную аналитику.")
+    changed_docs, changed_claims = documents, claims
+context = prepare_context(mode, question.question, changed_claims, changed_docs)
+
+with st.expander('Контекст запроса'):
+    st.text(context.text)
+    st.write('claim_id', context.claim_ids)
+    st.write('Порядок документов', context.document_order)
+with st.expander('p-adic ветви и коды'):
+    st.dataframe(pd.DataFrame([{'claim_id': c.claim_id, 'path': str(get_padic_code(c, changed_docs)),
+                                'code': encode_path(get_padic_code(c, changed_docs)), 'event_at': str(c.event_at),
+                                'text': c.text} for c in changed_claims if c.claim_id in context.claim_ids]), hide_index=True)
+if case:
+    st.write('Ожидаемый статус:', case.expected_status)
+    st.write(case.rationale)
+    with st.expander('Ручная проверка сценария'):
+        st.write('Проверьте исходный и изменённый состав, отсутствие утечки удалённой посылки и правильность нового эталона.')
+        st.download_button('Исходные данные', json.dumps(snapshot(documents, claims, [question]), ensure_ascii=False, indent=2), 'baseline.json')
+        st.download_button('Изменённые данные', json.dumps(snapshot(changed_docs, changed_claims, [question]), ensure_ascii=False, indent=2), case.case_id+'.json')
+        st.json(case.model_dump(mode='json'))
+        reviewer = st.text_input('Имя проверившего участника')
+        confirmed = st.checkbox('Я вручную проверил изменение и ожидаемый ответ')
+        if st.button('Сохранить мою проверку', disabled=not (reviewer.strip() and confirmed)):
+            case.reviewed_by = reviewer.strip()
+            case.reviewed_at = datetime.now(timezone.utc)
+            case.review_digest = review_digest(case, documents, claims, question)
+            cases = [case if c.case_id == case.case_id else c for c in cases]
+            write_jsonl(ROOT/'data/stress_cases.jsonl', [c.model_dump(mode='json') for c in cases])
+            st.success('Проверка сохранена. Последующие прогоны будут оцениваться.')
+    if not is_reviewed(case, documents, claims, question):
+        st.warning('Сценарий не проверен человеком. Ответ сохранится, но не попадёт в метрики.')
+
+if st.button('Запустить модель', type='primary', disabled=not connection_ready):
+    with st.spinner('Ожидание ответа модели...'):
+        st.session_state['last_run'] = run_one(question, mode, documents, claims, case,
+                                              provider=provider, model=selected_model)
+record = st.session_state.get('last_run')
+if record:
+    st.subheader(f"Последний запуск в текущей сессии: {record['question_id']}, {record['mode']}, {record['case_id']}")
+    st.caption('Здесь показан один последний ответ. Общая сводка всех сохранённых вопросов находится ниже.')
+    if len(record.get('attempts', [])) > 1:
+        st.caption('После ошибки формата выполнен один повторный запрос. Токены и время включают обе попытки.')
+    if record.get('attempts'):
+        with st.expander('Исходные ответы и ошибки проверки формата'):
+            st.json(record['attempts'])
+    if record['error']:
+        st.error(record['error'])
+        if record.get('api_metadata'):
+            with st.expander('Диагностика API'):
+                st.json(record['api_metadata'])
+        st.text(record['raw_response'] or '')
+    else:
+        output = record['output']
+        cols = st.columns(4)
+        for col, title, value in zip(cols, ['Статус','Confidence','Токены входа','Время, с'],
+                                     [output['status'], output['confidence'], record['usage'].get('input_tokens'), round(record['usage'].get('response_seconds',0),2)]):
+            col.metric(title, value)
+        st.write(output['answer'] or output.get('missing_information'))
+        st.write(output['explanation'])
+        available = {c['claim_id']: c for c in record['modified']['claims']}
+        for label, ids in [('Доказательства', output['evidence_ids']), ('Контрдоказательства', output['counterevidence_ids'])]:
+            st.write(label)
+            for key in ids:
+                st.write(key, available[key]['text'])
+                st.caption(available[key]['document_id'] + ': ' + available[key]['evidence'])
+        st.json(record['evaluation'] or {'оценка':'Не рассчитана: требуется ручная проверка сценария'})
+    st.download_button('Скачать полный результат', json.dumps(record, ensure_ascii=False, indent=2),
+                       record.get('filename') or result_filename(record))
+
+st.subheader('Сохранённые результаты')
+records = load_records()
+if records:
+    study = st.selectbox('Серия (единые данные, промпт и параметры)', sorted({r['study_digest'] for r in records}))
+    selected = [r for r in records if r['study_digest'] == study]
+    kind = st.selectbox('Условия сравнения', sorted({r['kind'] for r in selected}))
+    summary = summarize(selected)
+    st.write('Метрики доступных запусков')
+    st.caption('Все сохранённые вопросы выбранной серии и условия. Выбор вопроса вверху страницы не ограничивает эту сводку. Для каждого эксперимента и режима взята последняя попытка.')
+    st.dataframe(pd.DataFrame([r for r in summary['available_metrics'] if r['kind'] == kind]), hide_index=True)
+    missing = [r for r in summary['coverage'] if r['kind'] == kind and r['missing_modes']]
+    if missing:
+        st.info('Для сравнения A/B/C не хватает запусков. Доступные метрики показаны выше; список недостающих режимов — ниже.')
+        st.dataframe(pd.DataFrame([{'Вопрос':r['question_id'], 'Сценарий':r['case_id'],
+                                   'Есть режимы':', '.join(r['modes']), 'Не хватает':', '.join(r['missing_modes'])}
+                                  for r in missing]), hide_index=True)
+    with st.expander('Сравнение полных троек A/B/C'):
+        compared = [r for r in summary['metrics'] if r['kind'] == kind]
+        if compared:
+            st.dataframe(pd.DataFrame(compared), hide_index=True)
+        else:
+            st.info('Нет полной сопоставимой тройки A/B/C для этого условия.')
+    st.caption('Ошибки и непроверенные стресс-сценарии не получают оценок качества. Базовые эталоны требуют проверки всей командой.')
+    with st.expander('Устойчивость и калибровка confidence'):
+        stability = [r for r in summary['available_stability'] if r['stress_type'] == kind]
+        if stability:
+            st.caption('Устойчивость рассчитана для доступных пар базового и стрессового ответа одного режима.')
+            st.dataframe(pd.DataFrame(stability), hide_index=True)
+        else:
+            st.info('Для устойчивости выберите стресс-условие и выполните базовый и стрессовый запуск в одном режиме.')
+        if summary['available_calibration']:
+            st.caption('Калибровка confidence на базовых ответах выбранной серии.')
+            st.dataframe(pd.DataFrame(summary['available_calibration']), hide_index=True)
+        else:
+            st.info('Для калибровки пока нет оценённых базовых ответов.')
+    st.dataframe(pd.DataFrame([{'question': r['question_id'], 'mode':r['mode'], 'case':r['case_id'], 'status':r['output']['status'] if r['output'] else None,
+                               'error':r['error'], 'reviewed':r['reviewed']} for r in selected if r['kind']==kind]), hide_index=True)
+    st.download_button('Скачать сводку', json.dumps(summary, ensure_ascii=False, indent=2), 'summary.json')
+else:
+    st.info('Результатов пока нет. Каждый запуск сохраняется на диск автоматически.')

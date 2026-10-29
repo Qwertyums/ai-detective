@@ -1,0 +1,11 @@
+.venv/
+.model-cache/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+.env.*
+!.env.example
+tmp/
+.streamlit/secrets.toml
+.chatgpt-auth/
